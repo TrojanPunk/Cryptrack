@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper-container {
+    @apply max-w-5xl mx-auto px-2
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-color: #141721;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, span {
+  color: white;
+}
+
+/* Hero.css */
+/* Hero.css */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as per your requirement */
+  display: flex;
+  flex-direction: row; /* Adjust the flex direction to stack image and text vertically on smaller screens */
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container::before {
+  content: "";
+  background-image: url('./assets/BG.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Push the background image to the back */
+}
+
+.hero-image {
+  max-width: 400px;
+  width: 100%; /* Make sure the image scales within its container */
+  padding: 0 4%; /* Adjust padding for image */
+}
+
+.hero-text {
+  padding: 4%; /* Adjust padding for text */
+}
+
+h1 {
+  font-size: 3rem; /* Adjust the font size as needed */
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0; /* Add some spacing between heading and text */
+}
+
+h6 {
+  color: #989898;
+  max-width: 600px; /* Limit the width of the text container */
+  margin: 0;
+  padding-top: 5%;
+}
+
+.highlight {
+  color: #9747FF;
+}
+
+.login-button {
+  background-color: #9747FF;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  width: 80px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h6 {
+    font-size: 1rem
+  }
+
+  .hero-image {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 300px;
+    padding-top: 5%;
+  }
+
+  h1 {
+    margin-bottom: 0px;
+    font-size: 1.5rem; /* Adjust the font size for smaller screens */
+  }
+
+  h6 {
+    margin-top: 2%;
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+  }
 }
