@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Cryptrack 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Cryptocurrency Tracker App is a web application that allows users to track the current state of the cryptocurrency market, access historical data, and view charts based on the data fetched from the Gecko API.
 
-In the project directory, you can run:
+<img src="./cryptrack-images/Home.jpeg" width=100%>
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User Authentication: Firebase is used for user authentication, allowing users to sign up, log in, and access their personalized accounts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Real-time Data: The app uses the Gecko API to fetch real-time data on cryptocurrency prices, market capitalization, trading volume, and more.
 
-### `npm test`
+- Historical Data: Users can access historical data for cryptocurrencies to analyze trends over time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Interactive Charts: React ChartJS is used to generate interactive and visually appealing charts based on the fetched data.
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ReactJS: Frontend library for building the user interface.
+- Tailwind CSS: Utility-first CSS framework for responsive and customizable designs.
+- Firebase: Backend as a Service (BaaS) for user authentication and database management.
+- Gecko API: External API for fetching cryptocurrency data.
+- React ChartJS: React wrapper for ChartJS, used to create interactive charts.
+- Docker Compose: To build an image with the dependencies of the project to create and commence all configurations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencies
+- <a href="https://www.npmjs.com/package/react-chartjs-2" target="_blank">React ChartJS 2</a>
+- <a href="https://www.npmjs.com/package/chart.js?activeTab=readme" target="_blank">Chart.js</a>
+- <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a>
+- <a href="https://www.npmjs.com/package/firebase" target="_blank">Firebase</a>
+- <a href="https://www.npmjs.com/package/react-router-dom" target="_blank">React-Router-DOM</a>
+- <a href="https://tailwindcss.com/docs/installation/using-postcss" target="_blank">Tailwind</a>
+- <a href="https://drive.google.com/file/d/1-xlULFLhN1-A35PsKbQ_m602lDxIWT31/view?usp=sharing" target="_blank">Docker Image (Virtual Hard Disk v2)
+  
+  ```sh 
+  npm install react-chartjs-2 chart.js moment react-router-dom firebase axios -D tailwindcss postcss autoprefixer
+  ```
+  
+  
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js and npm must be installed on your machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+    ```sh 
+    git clone https://github.com/TrojanPunk/Cryptrack.git
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install the dependencies.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Set up Firebase:
+- Create a new Firebase project at https://console.firebase.google.com/
+- Enable email/password authentication in the Firebase console.
+- Obtain your Firebase config settings (API Key, Auth Domain, etc.) and add them to the appropriate files.
 
-## Learn More
+4. Set up Gecko API:
+- Register for an API key at https://coinmarketcap.com/api/
+- You do not need an API key for Gecko API. However, the server request failure rate is high.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Start the development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. Open your browser and navigate to http://localhost:3000 to see the app in action.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Captures
+<table>
+<tr>
+  <td><img src="" width=270></td>
+  <td></td>
+  <td><img src="" width=270></td>
+</tr>
+<td><img src="./cryptrack-images/Chart.jpeg" width=100%></td>
+  <td></td>
+<td><img src="./cryptrack-images/Table.jpeg" width=100%></td>
+</table>
 
-### Analyzing the Bundle Size
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Sign up or log in using your email and password.
 
-### Making a Progressive Web App
+2. Browse through the list of available cryptocurrencies to view their current data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Access historical data by selecting a cryptocurrency and choosing a specific time range.
 
-### Advanced Configuration
+4. View the interactive chart for a visual representation of the selected cryptocurrency's performance.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions are welcome! If you find any issues or have ideas for improvements, feel free to open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The site is hosted at: <a href="https://thecryptrack.netlify.app/" target="_blank">https://thecryptrack.netlify.app/</a>
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### User Authentication in this hosted version is not applicable as the server supports only static versions.
