@@ -90,7 +90,7 @@ Cryptocurrency Tracker App is a web application that allows users to track the c
 
 4. View the interactive chart for a visual representation of the selected cryptocurrency's performance.
 
-## Contributing
+## Contributions
 
 Contributions are welcome! If you find any issues or have ideas for improvements, feel free to open an issue or submit a pull request.
 
